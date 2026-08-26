@@ -17,11 +17,11 @@ public class CarRentalController {
 
     List<Car> cars = new ArrayList<>();
 
-
+/*
     @GetMapping("/cars")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public List<Car> listOfCars(){
 
-    }
+    }*/
 }
