@@ -1,6 +1,4 @@
-package com.example.OOSDS_lab1;
-
-import java.util.Date;
+package com.example.OOSDS_lab1.data;
 
 public class Car {
 

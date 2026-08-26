@@ -1,4 +1,4 @@
-package com.example.OOSDS_lab1;
+package com.example.OOSDS_lab1.data;
 
 public class Date {
 
