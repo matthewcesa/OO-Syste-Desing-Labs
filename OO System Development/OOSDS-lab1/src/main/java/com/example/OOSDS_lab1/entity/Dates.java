@@ -1,12 +1,17 @@
-package com.example.OOSDS_lab1.repository;
+package com.example.OOSDS_lab1.entity;
 
-public class Date {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Dates {
+
+    @Id
     private String dateDebut;
     private String dateFin;
 
-    public Date(){}
-    public Date(String dateDebut, String dateFin){
+    public Dates(){}
+    public Dates(String dateDebut, String dateFin){
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
     }

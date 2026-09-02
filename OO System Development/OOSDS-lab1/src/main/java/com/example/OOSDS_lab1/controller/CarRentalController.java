@@ -1,12 +1,12 @@
 package com.example.OOSDS_lab1.controller;
 
 
-import com.example.OOSDS_lab1.repository.Car;
+import com.example.OOSDS_lab1.entity.Car;
 import com.example.OOSDS_lab1.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.example.OOSDS_lab1.repository.Date;
+import com.example.OOSDS_lab1.entity.Dates;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class CarRentalController {
     @ResponseBody
     public void rentOrGetBack(@PathVariable("plateNumber") String plateNumber,
     @RequestParam(value = "rent", required = true) boolean rent,
-    @RequestBody Date dates) throws Exception {
+    @RequestBody Dates dates) throws Exception {
 
         carService.rentOrGetBack(plateNumber, dates.getDateDebut(), dates.getDateFin());
     }

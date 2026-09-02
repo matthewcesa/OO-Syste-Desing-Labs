@@ -1,13 +1,20 @@
-package com.example.OOSDS_lab1.repository;
+package com.example.OOSDS_lab1.entity;
+
+import jakarta.persistence.*;
 
 
+@Entity
 public class Car {
 
+    @Id
     private String plateNumber;
     private String brand;
     private int price;
     private boolean isRent;
-    private Date date;
+
+    @OneToOne
+    @JoinColumn(name = "date_id")
+    private Dates dates;
 
     public Car(){}
     public Car(String plateNumber, String brand, int price){
@@ -15,12 +22,12 @@ public class Car {
         this.brand = brand;
         this.price = price;
         this.isRent = false;
-        this.date = null;
+        this.dates = null;
     }
 
     public String toString(){
         if (this.isRent){
-            return "[PlateNumber: " + this.plateNumber + " - brand: " + this.brand + " - price: " + this.price + " - date ->" + this.getDate() + "].";
+            return "[PlateNumber: " + this.plateNumber + " - brand: " + this.brand + " - price: " + this.price + " - dates ->" + this.getDate() + "].";
         }
         return "[PlateNumber: " + this.plateNumber + " - brand: " + this.brand + " - price: " + this.price + "].";
     }
@@ -29,8 +36,8 @@ public class Car {
         this.plateNumber = plateNumber;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(Dates dates) {
+        this.dates = dates;
     }
 
     public void setRent(boolean rent) {
@@ -53,8 +60,8 @@ public class Car {
         return brand;
     }
 
-    public Date getDate() {
-        return date;
+    public Dates getDate() {
+        return dates;
     }
 
     public int getPrice() {
