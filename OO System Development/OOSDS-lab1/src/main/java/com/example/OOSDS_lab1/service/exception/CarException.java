@@ -1,4 +1,4 @@
-package com.example.OOSDS_lab1.service;
+package com.example.OOSDS_lab1.service.exception;
 
 public class CarException extends Exception{
 

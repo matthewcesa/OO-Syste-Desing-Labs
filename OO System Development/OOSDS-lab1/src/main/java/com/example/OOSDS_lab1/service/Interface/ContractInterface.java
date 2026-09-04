@@ -1,4 +1,4 @@
-package com.example.OOSDS_lab1.service;
+package com.example.OOSDS_lab1.service.Interface;
 
 import com.example.OOSDS_lab1.entity.Car;
 import com.example.OOSDS_lab1.entity.Contract;

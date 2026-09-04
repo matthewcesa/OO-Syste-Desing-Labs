@@ -1,5 +1,6 @@
-package com.example.OOSDS_lab1.entity;
+package com.example.OOSDS_lab1.entity.repositories;
 
+import com.example.OOSDS_lab1.entity.Car;
 import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 

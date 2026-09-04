@@ -2,6 +2,7 @@ package com.example.OOSDS_lab1.service;
 
 import com.example.OOSDS_lab1.entity.Car;
 import com.example.OOSDS_lab1.entity.Dates;
+import com.example.OOSDS_lab1.service.Interface.CarInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CarService implements CarInterface{
+public class CarService implements CarInterface {
 
     private List<Car> cars = new ArrayList<>();
 

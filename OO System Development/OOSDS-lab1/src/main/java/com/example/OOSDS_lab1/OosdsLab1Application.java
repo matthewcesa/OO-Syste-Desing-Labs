@@ -1,7 +1,7 @@
 package com.example.OOSDS_lab1;
 
 import com.example.OOSDS_lab1.entity.Car;
-import com.example.OOSDS_lab1.entity.CarJPARepository;
+import com.example.OOSDS_lab1.entity.repositories.CarJPARepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

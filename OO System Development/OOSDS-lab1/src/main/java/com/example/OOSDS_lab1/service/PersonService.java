@@ -1,11 +1,12 @@
 package com.example.OOSDS_lab1.service;
 
 import com.example.OOSDS_lab1.entity.Person;
+import com.example.OOSDS_lab1.service.Interface.PersonInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonService implements PersonInterface{
+public class PersonService implements PersonInterface {
 
     List<Person> persons = new ArrayList<>();
     @Override
