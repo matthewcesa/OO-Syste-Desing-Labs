@@ -2,6 +2,8 @@ package com.example.OOSDS_lab1.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+
 
 @Entity
 public class Car {
@@ -11,6 +13,20 @@ public class Car {
     private String brand;
     private int price;
     private boolean isRent;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "car")
+    private Collection<Contract> contracts;
+
+    public Collection<Contract> getContracts(){
+        return this.contracts;
+    }
+
+    public void setContracts(Collection<Contract> cont){this.contracts = cont;}
+
+    public void addContract(Contract contract){
+        this.contracts.add(contract);
+    }
+
 
     @OneToOne
     @JoinColumn(name = "date_id")
